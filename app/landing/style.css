@@ -8,7 +8,8 @@
 #landing #container {
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 #landing #container #full {
@@ -59,17 +60,17 @@
   left: 75%;
 }
 
-#landing #container #social {
+#landing #social {
   position: absolute;
   top: 5%;
   right: 5%;
 }
 
-#landing #container #social li {
+#landing #social li {
   display: inline;
   padding: 0 4px;
 }
 
-#landing #container #social i {
+#landing #social i {
   color: #000;
 }
