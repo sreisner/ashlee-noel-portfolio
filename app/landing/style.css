@@ -34,7 +34,7 @@
 
 #landing #container a.site-link {
   position: absolute;
-  top: 50%;
+  top: 75%;
   transform: translateY(-50%);
   text-decoration: none;
   color: #000;
@@ -69,9 +69,9 @@
 }
 
 #landing #container a#gallery {
-  right: 75%;
+  right: 80%;
 }
 
 #landing #container a#about {
-  left: 75%;
+  left: 80%;
 }
