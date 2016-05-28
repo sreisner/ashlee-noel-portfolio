@@ -8,10 +8,10 @@
   var minifyCSS = require('gulp-minify-css');
   var htmlmin = require('gulp-htmlmin');
   var watch = require('gulp-watch');
-  var batch = require('gulp-batch');
   var livereload = require('gulp-livereload');
   var rename = require('gulp-rename');
   var uglify = require('gulp-uglify');
+  var nodemon = require('gulp-nodemon');
 
   gulp.task('build', function() {
     gulp.start('minify-html');
@@ -48,18 +48,25 @@
   });
 
   gulp.task('watch', function () {
-    app.start(80);
     gulp.start('build');
-    livereload({ start: true });
-    watch(
-      [
-        './index.js',
-        './app/**',
-        '!./app/dist/**'
-      ],
-      batch(function(events, done) {
-        gulp.start('build', done);
-      })
-    );
+    livereload.listen({ start: true });
+
+    nodemon({
+      script: './index.js'
+    }).on('restart', function() {
+      livereload.reload();
+    });
+
+    watch(['./app/**/*.html', '!./app/dist/**'], function() {
+      gulp.start('minify-html');
+    });
+
+    watch(['./app/**/*.css', '!./app/dist/**'], function() {
+      gulp.start('minify-css');
+    });
+
+    watch(['./app/**/*.js', '!./app/dist/**'], function() {
+      gulp.start('minify-js');
+    });
   });
 })();
