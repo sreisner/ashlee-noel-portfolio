@@ -2,23 +2,28 @@
   'use strict';
 
   var app = angular.module('App', ['ui.router']);
-
-  app.config(function($stateProvider, $urlRouterProvider) {
-    $urlRouterProvider.otherwise('/');
-    $stateProvider
-      .state('landing', {
-        url: '/',
-        templateUrl: '/landing/landing.tmpl.html'
-      })
-      .state('gallery', {
-        url: '/gallery',
-        templateUrl: '/gallery/gallery.tmpl.html',
-        controller: '/gallery/galleryController.js',
-        controllerAs: 'vm'
-      })
-      .state('about', {
-        url: '/about',
-        templateUrl: '/about/about.tmpl.html'
-      });
-  });
+  app.config(
+    [
+      '$stateProvider',
+      '$urlRouterProvider',
+      function($stateProvider, $urlRouterProvider) {
+        $urlRouterProvider.otherwise('/');
+        $stateProvider
+          .state('landing', {
+            url: '/',
+            templateUrl: '/static/landing/landing.tmpl.min.html'
+          })
+          .state('gallery', {
+            url: '/gallery',
+            templateUrl: '/static/gallery/gallery.tmpl.min.html',
+            controller: '/static/gallery/gallery.controller.min.js',
+            controllerAs: 'vm'
+          })
+          .state('about', {
+            url: '/about',
+            templateUrl: '/static/about/about.tmpl.min.html'
+          });
+      }
+    ]
+  );
 })();

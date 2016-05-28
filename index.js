@@ -5,10 +5,11 @@
   var express = require('express');
   var app = express();
 
-  app.use('/', express.static(path.join(__dirname, 'app')));
+  app.use('/static', express.static(path.join(__dirname, 'app', 'dist')));
+  app.use('/images', express.static(path.join(__dirname, 'app', 'images')));
 
-  app.get('/app.js', function(request, response) {
-    response.sendFile(path.join(__dirname, 'app', 'app.js'));
+  app.get('/', function(request, response) {
+    response.sendFile(path.join(__dirname, 'app', 'dist', 'index.min.html'));
   });
 
   app.get('/api/art', function(request, response) {
