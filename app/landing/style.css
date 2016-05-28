@@ -5,6 +5,22 @@
   z-index: 2;
 }
 
+#landing #social {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  z-index: 2;
+}
+
+#landing #social li {
+  display: inline;
+  padding: 0 4px;
+}
+
+#landing #social i {
+  color: #000;
+}
+
 #landing #container {
   position: absolute;
   left: 50%;
@@ -58,19 +74,4 @@
 
 #landing #container a#about {
   left: 75%;
-}
-
-#landing #social {
-  position: absolute;
-  top: 5%;
-  right: 5%;
-}
-
-#landing #social li {
-  display: inline;
-  padding: 0 4px;
-}
-
-#landing #social i {
-  color: #000;
 }
