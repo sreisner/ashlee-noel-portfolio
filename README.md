@@ -1,0 +1,2 @@
+- Explain livereload (need Chrome extension).
+- How to build and watch.
