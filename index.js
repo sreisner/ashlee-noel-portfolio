@@ -17,6 +17,7 @@
   });
 
   function start(port) {
+    var port = port || 80;
     app.listen(port, function() {
       console.log(`App running on port ${port}`);
     });
