@@ -12,6 +12,7 @@
   var rename = require('gulp-rename');
   var uglify = require('gulp-uglify');
   var nodemon = require('gulp-nodemon');
+  var sourcemaps = require('gulp-sourcemaps');
 
   gulp.task('build', function() {
     gulp.start('minify-html');
@@ -39,10 +40,14 @@
 
   gulp.task('minify-js', function() {
     gulp.src(['./app/**/*.js', '!./app/dist/**'])
-      .pipe(uglify())
+      .pipe(sourcemaps.init())
+      .pipe(uglify({
+        sourceMap: true
+      }))
       .pipe(rename({
         suffix: '.min'
       }))
+      .pipe(sourcemaps.write())
       .pipe(gulp.dest('./app/dist'))
       .pipe(livereload());
   });
