@@ -68,10 +68,10 @@
   width: 25%;
 }
 
-#landing #container a#gallery {
+#landing #container a#gallery-link {
   right: 80%;
 }
 
-#landing #container a#about {
+#landing #container a#about-link {
   left: 80%;
 }

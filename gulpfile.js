@@ -56,12 +56,6 @@
     gulp.start('build');
     livereload.listen({ start: true });
 
-    nodemon({
-      script: './index.js'
-    }).on('restart', function() {
-      livereload.reload();
-    });
-
     watch(['./app/**/*.html', '!./app/dist/**'], function() {
       gulp.start('minify-html');
     });

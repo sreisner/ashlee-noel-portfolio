@@ -1,6 +1,7 @@
 (function() {
   'use strict';
 
+  var fs = require('fs');
   var path = require('path');
   var express = require('express');
   var app = express();
@@ -13,21 +14,27 @@
   });
 
   app.get('/api/art', function(request, response) {
-    response.json('[{}, {}, {}]');
+    fs.readdir('./app/images/art', function(err, files) {
+      if(err) {
+        console.log(error);
+        return;
+      }
+      var data = files.map(function(file) {
+        return {
+          preview_url: '/images/art/' + file,
+          full_url: '/images/art/' + file,
+          name: file,
+          width: 100,
+          height: 100,
+          medium: 'Unknown'
+        };
+      });
+
+      response.json(JSON.stringify(data));
+    });
   });
 
-  function start(port) {
-    var port = port || 80;
-    app.listen(port, function() {
-      console.log(`App running on port ${port}`);
-    });
-  }
+  app.listen(80);
 
-  if(require.main === module) {
-    start(process.argv[2]);
-  } else {
-    module.exports = {
-      start: start
-    };
-  }
+  module.exports = app;
 })();

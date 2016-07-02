@@ -1,5 +1,5 @@
 (function() {
   'use strict';
 
-  var app = angular.module('App', ['ui.router']);
+  angular.module('App', ['ngRoute']);
 })();

@@ -1,3 +1,9 @@
 <div id="gallery">
-  <h1>There are {{ vm.art.length }} pieces of art.</h1>
+  <app-nav></app-nav>
+
+  <div id="images" class="container-fluid">
+    <div class="image-preview" ng-repeat="image in vm.art track by $index">
+      <img ng-src="{{ image.preview_url }}">
+    </div>
+  </div>
 </div>
