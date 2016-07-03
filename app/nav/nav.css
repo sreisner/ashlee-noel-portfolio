@@ -1,80 +1,97 @@
-@import 'https://fonts.googleapis.com/css?family=Cormorant+Garamond';
+@import 'https://fonts.googleapis.com/css?family=Poiret+One';
 
 nav {
-  font-family: 'Cormorant Garamond';
-  font-weight: 100;
-  text-transform: uppercase;
+  font-family: 'Poiret One';
 }
 
 nav.app-nav {
-  background-color: #000;
-  position: fixed;
   width: 100%;
-  height: 150px;
   font-weight: 100;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 nav.app-nav a {
-  padding: 15px 0px;
   text-decoration: none;
-  font-size: 2.5rem;
-  color: #FFFFFF;
-  position: relative;
+  color: #FFF;
 }
 
-nav.app-nav a.site-link::before,
-nav.app-nav a.site-link::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  width: 0;
-  height: 1px;
-  background-color: #FFF;
-  transition: all 0.3s;
+nav.app-nav .social-links a {
+  padding: 0 3px;
 }
 
-nav.app-nav a.site-link::before {
-  right: 50%;
-}
+@media (min-width: 1201px) {
+  nav.app-nav {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+  }
 
-nav.app-nav a.site-link::after {
-  left: 50%;
-  transition-delay: 100ms;
-}
+  nav.app-nav a {
+    padding: 15px 0px;
+    font-size: 3rem;
+    position: relative;
+  }
 
-nav.app-nav a.site-link.active::before,
-nav.app-nav a.site-link.active::after,
-nav.app-nav a.site-link:hover::before,
-nav.app-nav a.site-link:hover::after {
-  width: 35%;
-}
+  nav.app-nav a.site-link::before,
+  nav.app-nav a.site-link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    background-color: #FFF;
+    transition: all 0.3s;
+  }
 
-nav.app-nav .logo {
-  height: 100%;
-  text-align: center;
-}
+  nav.app-nav a.site-link::before {
+    right: 50%;
+  }
 
-nav.app-nav .logo img {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  max-height: 100%;
-  max-width: 75vw;
-}
+  nav.app-nav a.site-link::after {
+    left: 50%;
+    transition-delay: 100ms;
+  }
 
-nav.app-nav .left-nav-links,
-nav.app-nav .right-nav-links,
-nav.app-nav .logo {
-    width: 100%;
-}
+  nav.app-nav a.site-link.active::before,
+  nav.app-nav a.site-link.active::after,
+  nav.app-nav a.site-link:hover::before,
+  nav.app-nav a.site-link:hover::after {
+    width: 35%;
+  }
 
-nav.app-nav .left-nav-links a {
-  float: right;
-}
+  nav.app-nav .logo {
+    height: 100%;
+    text-align: center;
+  }
 
-nav.app-nav .right-nav-links a {
-  float: left;
+  nav.app-nav .logo img {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    max-height: 100%;
+    max-width: 75vw;
+  }
+
+  nav.app-nav .left-nav-links,
+  nav.app-nav .right-nav-links,
+  nav.app-nav .logo {
+      width: 100%;
+  }
+
+  nav.app-nav .left-nav-links a {
+    float: right;
+  }
+
+  nav.app-nav .right-nav-links a {
+    float: left;
+  }
+
+  nav.app-nav .social-links {
+    position: absolute;
+    display: flex;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }

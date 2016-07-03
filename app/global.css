@@ -9,3 +9,10 @@
 body {
   font-family: 'Roboto Condensed', sans-serif;
 }
+
+.page-container {
+  width: 95vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}

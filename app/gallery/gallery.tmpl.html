@@ -1,9 +1,11 @@
 <div id="gallery">
-  <app-nav></app-nav>
+  <div class="page-container">
+    <app-nav></app-nav>
 
-  <div id="images" class="container-fluid">
-    <div class="image-preview" ng-repeat="image in vm.art track by $index">
-      <img ng-src="{{ image.preview_url }}">
+    <div id="images">
+      <div class="image-preview" ng-repeat="image in vm.art track by $index">
+        <img ng-src="{{ image.preview_url }}">
+      </div>
     </div>
   </div>
 </div>
