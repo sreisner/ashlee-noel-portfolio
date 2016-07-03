@@ -1,11 +1,8 @@
-<div id="gallery">
-  <div class="page-container">
-    <app-nav></app-nav>
-
-    <div id="images">
-      <div class="image-preview" ng-repeat="image in vm.art track by $index">
-        <img ng-src="{{ image.preview_url }}">
-      </div>
-    </div>
-  </div>
+<div class="gallery">
+  <image-preview ng-repeat="image in vm.art track by $index"
+                 url="{{image.previewUrl}}"
+                 hover-zoom-scale="1.1"
+                 hover-zoom-speed="0.5"
+                 hover-zoom-function="ease"
+                 display="start"></image-preview>
 </div>

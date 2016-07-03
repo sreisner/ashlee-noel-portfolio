@@ -21,8 +21,8 @@
       }
       var data = files.map(function(file) {
         return {
-          preview_url: '/images/art/' + file,
-          full_url: '/images/art/' + file,
+          previewUrl: '/images/art/' + file,
+          fullUrl: '/images/art/' + file,
           name: file,
           width: 100,
           height: 100,

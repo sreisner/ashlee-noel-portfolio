@@ -5,8 +5,10 @@
     <link href="/static/style.min.css" rel="stylesheet">
   </head>
   <body ng-app="App">
-
-    <div ng-view></div>
+    <div class="page-container">
+      <app-nav></app-nav>
+      <div ng-view></div>
+    </div>
 
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
@@ -15,7 +17,9 @@
     <script src="https://cdn.jsdelivr.net/lodash/4.13.1/lodash.min.js"></script>
     <script src="/static/app.min.js"></script>
     <script src="/static/nav/nav.directive.min.js"></script>
+    <script src="/static/gallery/imagePreview/imagePreview.directive.min.js"></script>
     <script src="/static/gallery/gallery.controller.min.js"></script>
+    <script src="/static/gallery/gallery.directive.min.js"></script>
     <script src="/static/routes.min.js"></script>
   </body>
 </html>

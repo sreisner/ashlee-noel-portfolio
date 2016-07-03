@@ -7,12 +7,11 @@
 }
 
 body {
-  font-family: 'Roboto Condensed', sans-serif;
   background-color: #000;
 }
 
 .page-container {
-  width: 95vw;
+  width: 75vw;
   position: relative;
   left: 50%;
   transform: translateX(-50%);

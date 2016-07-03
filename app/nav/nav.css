@@ -1,12 +1,19 @@
 @import 'https://fonts.googleapis.com/css?family=Poiret+One';
 
-nav {
+nav.app-nav {
+  position: relative;
+  display: inline-block;
+
   font-family: 'Poiret One';
+  margin: 20px 0px;
+  height: 120px;
+  width: 100%;
+
+  font-size: 3rem;
 }
 
-nav.app-nav {
-  width: 100%;
-  font-weight: 100;
+nav.app-nav > * {
+  height: 100%;
 }
 
 nav.app-nav a {
@@ -14,84 +21,74 @@ nav.app-nav a {
   color: #FFF;
 }
 
-nav.app-nav .social-links a {
-  padding: 0 3px;
+nav.app-nav .nav-container {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-@media (min-width: 1201px) {
-  nav.app-nav {
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 150px;
-  }
+nav.app-nav .nav-container > * {
+  height: 100%;
+}
 
-  nav.app-nav a {
-    padding: 15px 0px;
-    font-size: 3rem;
-    position: relative;
-  }
+nav.app-nav .nav-container .logo img {
+  height: 100%;
+}
 
-  nav.app-nav a.site-link::before,
-  nav.app-nav a.site-link::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    width: 0;
-    height: 1px;
-    background-color: #FFF;
-    transition: all 0.3s;
-  }
+nav.app-nav .nav-container .left-nav-links,
+nav.app-nav .nav-container .right-nav-links {
+  display: flex;
+  align-items: center;
+  position: absolute;
+}
 
-  nav.app-nav a.site-link::before {
-    right: 50%;
-  }
+nav.app-nav .site-link {
+  position: relative;
+}
 
-  nav.app-nav a.site-link::after {
-    left: 50%;
-    transition-delay: 100ms;
-  }
+nav.app-nav .nav-container .left-nav-links {
+  left: 0;
+  transform: translateX(-100%);
+}
 
-  nav.app-nav a.site-link.active::before,
-  nav.app-nav a.site-link.active::after,
-  nav.app-nav a.site-link:hover::before,
-  nav.app-nav a.site-link:hover::after {
-    width: 35%;
-  }
+nav.app-nav .nav-container .right-nav-links {
+  right: 0;
+  transform: translateX(100%);
+}
 
-  nav.app-nav .logo {
-    height: 100%;
-    text-align: center;
-  }
+nav.app-nav .site-link::before,
+nav.app-nav .site-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background-color: #FFF;
+  transition: all 0.3s;
+}
 
-  nav.app-nav .logo img {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    max-height: 100%;
-    max-width: 75vw;
-  }
+nav.app-nav .site-link::before {
+  right: 50%;
+}
 
-  nav.app-nav .left-nav-links,
-  nav.app-nav .right-nav-links,
-  nav.app-nav .logo {
-      width: 100%;
-  }
+nav.app-nav .site-link::after {
+  left: 50%;
+  transition-delay: 0.1s;
+}
 
-  nav.app-nav .left-nav-links a {
-    float: right;
-  }
+nav.app-nav a.site-link.active::before,
+nav.app-nav a.site-link.active::after,
+nav.app-nav a.site-link:hover::before,
+nav.app-nav a.site-link:hover::after {
+  width: 35%;
+}
 
-  nav.app-nav .right-nav-links a {
-    float: left;
-  }
+nav.app-nav .social-links {
+  position: relative;
+  display: flex;
+  float: right;
+}
 
-  nav.app-nav .social-links {
-    position: absolute;
-    display: flex;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-  }
+nav.app-nav .social-links a {
+  padding: 0 3px;
 }
