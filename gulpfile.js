@@ -40,14 +40,10 @@
 
   gulp.task('minify-js', function() {
     gulp.src(['./app/**/*.js', '!./app/dist/**'])
-      .pipe(sourcemaps.init())
-      .pipe(uglify({
-        sourceMap: true
-      }))
+      // TODO:  Actually minify your js.
       .pipe(rename({
         suffix: '.min'
       }))
-      .pipe(sourcemaps.write())
       .pipe(gulp.dest('./app/dist'))
       .pipe(livereload());
   });
