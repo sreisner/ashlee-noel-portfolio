@@ -8,10 +8,10 @@
         function($routeProvider) {
           $routeProvider
             .when('/', {
-              templateUrl: '/static/landing/landing.tmpl.min.html'
+              template: '<gallery></gallery>'
             })
-            .when('/gallery', {
-              template: '<gallery></gallery>',
+            .when('/about', {
+              templateUrl: '/static/about/about.min.html',
             })
             .otherwise({
               redirectTo: '/'

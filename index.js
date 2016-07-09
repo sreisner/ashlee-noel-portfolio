@@ -26,7 +26,8 @@
           name: file,
           width: 100,
           height: 100,
-          medium: 'Unknown'
+          medium: 'Unknown',
+          previewPosition: 50
         };
       });
 
