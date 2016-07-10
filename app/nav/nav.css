@@ -98,7 +98,7 @@ nav.app-nav .social-links a {
   }
 }
 
-@media (min-width: 675px) and (max-width: 999px) {
+@media (min-width: 800px) and (max-width: 999px) {
   nav.app-nav,
   nav.app-nav .nav-container {
     display: flex;
@@ -116,7 +116,7 @@ nav.app-nav .social-links a {
   }
 }
 
-@media (max-width: 674px) {
+@media (max-width: 799px) {
   nav.app-nav {
     height: 100vh;
     max-height: 100vh;
@@ -141,7 +141,7 @@ nav.app-nav .social-links a {
 
   nav.app-nav .nav-container .logo img {
     content: url('/images/mobile logo black.png');
-    width: 100%;
+    width: 75%;
   }
 
   nav.app-nav .nav-container .left-nav-links,
