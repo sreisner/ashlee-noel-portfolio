@@ -7,6 +7,18 @@
   height: 100%;
 }
 
-.gallery image-preview {
-  margin: 1px;
+@media (min-width: 675px) {
+  .gallery image-preview {
+    margin: 1px;
+    width: 30rem;
+    height: 20rem;
+  }
+}
+
+@media (max-width: 674px) {
+  .gallery image-preview {
+    margin: 2px;
+    width: 90vw;
+    height: 60vw;
+  }
 }
