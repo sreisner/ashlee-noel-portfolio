@@ -58,60 +58,6 @@
 
             image.context.style.transition = 'all ' + hoverZoomSpeed + 's ' + hoverZoomFunction;
           });
-
-
-          // image.bind('load', function(event) {
-          //   var imgElement = angular.element(event.target);
-          //   var width = imgElement[0].naturalWidth;
-          //   var height = imgElement[0].naturalHeight;
-          //
-          //   angular.element(frame);
-          //   if(width > height) {
-          //     angular.element(frame).toggleClass('wide');
-          //     imgElement.innerHeight(frame.height());
-          //     var originOffset = ((frame.width() / 2) / imgElement.width()) * 100;
-          //     if(display === 'start') {
-          //       frame.css('align-items', 'flex-start');
-          //       imgElement.css('transform-origin', '' + originOffset + '% 50%');
-          //     } else if(display === 'center') {
-          //       frame.css('align-items', 'center');
-          //       imgElement.css('transform-origin', '50% 50%');
-          //     } else if(display === 'end') {
-          //       frame.css('align-items', 'flex-end');
-          //       imgElement.css('transform-origin', '' + (100 - originOffset) + '% 50%');
-          //     } else {
-          //       frame.css('align-items', 'center');
-          //       imgElement.css('transform-origin', DEFAULT_TRANSFORM_ORIGIN);
-          //     }
-          //   } else {
-          //     frame.className = 'tall';
-          //     imgElement.innerWidth(frame.width());
-          //     var originOffset = ((frame.height() / 2) / imgElement.height()) * 100;
-          //     if(display === 'start') {
-          //       frame.css('align-items', 'flex-start');
-          //       imgElement.css('transform-origin', '50% ' + originOffset + '%');
-          //     } else if(display === 'center') {
-          //       frame.css('align-items', 'center');
-          //       imgElement.css('transform-origin', '50% 50%');
-          //     } else if(display === 'end') {
-          //       frame.css('align-items', 'flex-end');
-          //       imgElement.css('transform-origin', '50% ' + (100 - originOffset) + '%');
-          //     } else {
-          //       frame.css('align-items', 'center');
-          //       imgElement.css('transform-origin', DEFAULT_TRANSFORM_ORIGIN);
-          //     }
-          //   }
-          // });
-
-          // var transitionCss = 'all ' + hoverZoomSpeed + 's ' + hoverZoomFunction;
-          // var transformCss = 'scale(' + hoverZoomScale + ')';
-          //
-          // image.css('transition', transitionCss);
-          // image.hover(function() {
-          //   image.css('transform', transformCss);
-          // }, function() {
-          //   image.css('transform', 'scale(1)');
-          // });
         }
       };
     });
