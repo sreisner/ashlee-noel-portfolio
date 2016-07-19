@@ -128,7 +128,6 @@ nav.app-nav .social-links a {
     flex-direction: column;
     align-content: center;
     align-items: center;
-    justify-content: center;
   }
 
   nav.app-nav .nav-container .logo a {
@@ -140,13 +139,14 @@ nav.app-nav .social-links a {
   }
 
   nav.app-nav .nav-container .logo img {
-    content: url('/images/mobile logo black.png');
     width: 75%;
   }
 
   nav.app-nav .nav-container .left-nav-links,
   nav.app-nav .nav-container .right-nav-links,
   nav.app-nav .social-links {
+    z-index: 2;
     margin-left: 30px;
+    margin-bottom: 30px;
   }
 }
