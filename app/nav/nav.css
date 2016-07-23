@@ -11,6 +11,10 @@ nav.app-nav a {
   color: #FFF;
 }
 
+nav.app-nav .nav-container .logo {
+  opacity: 0.75;
+}
+
 nav.app-nav .site-link {
   position: relative;
 }
@@ -43,7 +47,8 @@ nav.app-nav a.site-link:hover::after {
 }
 
 nav.app-nav .social-links a {
-  padding: 0 3px;
+  padding: 0 10px;
+  color: #CCC;
 }
 
 @media (min-width: 1000px) {
@@ -51,7 +56,7 @@ nav.app-nav .social-links a {
     position: relative;
     display: inline-block;
 
-    margin: 20px 0px;
+    margin-top: 20px;
     height: 120px;
   }
 
@@ -71,6 +76,7 @@ nav.app-nav .social-links a {
 
   nav.app-nav .nav-container .logo img {
     height: 100%;
+    margin: 0 75px;
   }
 
   nav.app-nav .nav-container .left-nav-links,
@@ -118,6 +124,7 @@ nav.app-nav .social-links a {
 
 @media (max-width: 799px) {
   nav.app-nav {
+    position: relative;
     height: 100vh;
     max-height: 100vh;
   }
