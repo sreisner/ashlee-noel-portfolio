@@ -47,7 +47,6 @@ nav.app-nav a.site-link:hover::after {
 }
 
 nav.app-nav .social-links a {
-  padding-left: 20px;
   color: #CCC;
 }
 
@@ -102,6 +101,10 @@ nav.app-nav .social-links a {
     align-items: center;
     float: right;
   }
+
+  nav.app-nav .social-links a {
+    padding-left: 20px;
+  }
 }
 
 @media (min-width: 800px) and (max-width: 999px) {
@@ -114,11 +117,17 @@ nav.app-nav .social-links a {
   }
 
   nav.app-nav .nav-container .logo img {
-    width: 100%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 60%;
+
+    margin: 25px 0;
   }
 
-  nav.app-nav .social-links {
-    margin-bottom: 30px;
+  nav.app-nav .social-links a {
+    padding: 0 10px;
   }
 }
 
@@ -126,7 +135,7 @@ nav.app-nav .social-links a {
   nav.app-nav {
     position: relative;
     height: 100vh;
-    max-height: 100vh;
+    min-height: 600px;
   }
 
   nav.app-nav,
@@ -135,6 +144,7 @@ nav.app-nav .social-links a {
     flex-direction: column;
     align-content: center;
     align-items: center;
+    justify-content: center;
   }
 
   nav.app-nav .nav-container .logo a {
@@ -146,7 +156,9 @@ nav.app-nav .social-links a {
   }
 
   nav.app-nav .nav-container .logo img {
-    width: 75%;
+    width: 50%;
+
+    margin: 50px 0;
   }
 
   nav.app-nav .nav-container .left-nav-links,
@@ -155,5 +167,15 @@ nav.app-nav .social-links a {
     z-index: 2;
     margin-left: 30px;
     margin-bottom: 30px;
+  }
+
+  nav.app-nav .social-links a {
+    padding: 0 20px;
+    font-size: 1.5em;
+  }
+
+  nav.app-nav .site-link::before,
+  nav.app-nav .site-link::after {
+    display: none;
   }
 }
