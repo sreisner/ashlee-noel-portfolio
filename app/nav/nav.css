@@ -50,7 +50,7 @@ nav.app-nav .social-links a {
   color: #CCC;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1172px) {
   nav.app-nav {
     position: relative;
     display: inline-block;
@@ -107,7 +107,7 @@ nav.app-nav .social-links a {
   }
 }
 
-@media (min-width: 800px) and (max-width: 999px) {
+@media (min-width: 800px) and (max-width: 1171px) {
   nav.app-nav,
   nav.app-nav .nav-container {
     display: flex;

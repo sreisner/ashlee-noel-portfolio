@@ -14,13 +14,13 @@ body {
   transform: translateX(-50%);
 }
 
-@media (min-width: 1273px) {
+@media (min-width: 1500px) {
   .page-container {
     width: 75vw;
   }
 }
 
-@media (max-width: 1272px) {
+@media (max-width: 1499px) {
   .page-container {
     width: 95vw;
   }
