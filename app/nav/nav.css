@@ -47,7 +47,7 @@ nav.app-nav a.site-link:hover::after {
 }
 
 nav.app-nav .social-links a {
-  padding: 0 10px;
+  padding-left: 20px;
   color: #CCC;
 }
 
