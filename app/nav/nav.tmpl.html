@@ -1,15 +1,15 @@
 <nav class="app-nav">
   <div class="nav-container">
     <div class="logo">
-      <a href="/#/"><img id="logo-img" src="/images/scrolled-logo-black.png" /></a>
+      <a href="#/"><img id="logo-img" src="/images/scrolled-logo-black.png" /></a>
     </div>
 
     <div class="left-nav-links">
-      <a class="active site-link" href="/#/">gallery</a>
+      <a class="site-link" ng-class="{'active': vm.selectedTab == '/'}" href="#/">gallery</a>
     </div>
 
     <div class="right-nav-links">
-      <a class="site-link" href="/#/about">about</a>
+      <a class="site-link" ng-class="{'active': vm.selectedTab == '/about'}" href="#about">about</a>
     </div>
   </div>
 

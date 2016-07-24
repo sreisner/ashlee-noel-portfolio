@@ -11,7 +11,7 @@
               template: '<gallery></gallery>'
             })
             .when('/about', {
-              templateUrl: '/static/about/about.min.html',
+              templateUrl: '/static/about/about.tmpl.min.html',
             })
             .otherwise({
               redirectTo: '/'

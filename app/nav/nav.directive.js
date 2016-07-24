@@ -6,6 +6,8 @@
     return {
       restrict: 'E',
       templateUrl: '/static/nav/nav.tmpl.min.html',
+      controller: 'NavController',
+      controllerAs: 'vm',
       link: function(_, element) {
         var img = element.find('#logo-img')[0];
         setLogoImage(img);
