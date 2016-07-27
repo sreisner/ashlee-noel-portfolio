@@ -1,5 +1,5 @@
 .image-modal {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -21,4 +21,13 @@
   transform: translate(-50%, -50%);
   max-width: 90%;
   max-height: 90%;
+}
+
+.image-modal .close-button {
+  position: absolute;
+  top: 0;
+  cursor: pointer;
+  color: #FFF;
+  padding: 15px;
+  left: 100%;
 }

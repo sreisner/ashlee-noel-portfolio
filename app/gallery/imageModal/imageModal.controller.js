@@ -6,6 +6,10 @@
       '$scope',
       function($scope) {
         this.image = JSON.parse($scope.image);
+
+        this.close = function() {
+          $scope.$emit('modalClose');
+        };
       }
     ]);
 })();
