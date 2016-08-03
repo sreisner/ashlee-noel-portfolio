@@ -1,3 +1,15 @@
+@media (min-width: 800px) {
+  .about {
+    min-height: 75vh;
+  }
+}
+
+@media (max-width: 799px) {
+  .about {
+    min-height: 95vh;
+  }
+}
+
 .about .coming-soon {
   color: #FFF;
   font-style: italic;

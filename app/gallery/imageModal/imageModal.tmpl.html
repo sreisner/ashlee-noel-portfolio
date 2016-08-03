@@ -1,5 +1,10 @@
 <div class="image-modal">
   <div class="background"></div>
-  <img ng-src="{{vm.image.fullUrl}}">
-  <i class="fa fa-3x fa-times close-button" ng-click="vm.close()"></i>
+  <div class="detail-row">
+    <span class="detail">{{vm.image.name}} - {{vm.image.width}}" x {{vm.image.height}}" - {{vm.image.medium}}</span>
+    <i class="fa fa-3x fa-times close-button" ng-click="vm.close()"></i>
+  </div>
+  <div class="image-container">
+    <img ng-src="{{vm.image.fullUrl}}">
+  </div>
 </div>

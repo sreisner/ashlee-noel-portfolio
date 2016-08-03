@@ -1,20 +1,28 @@
 .image-modal {
   position: fixed;
-  top: 0;
   left: 0;
   width: 100%;
   height: 100vh;
   max-height: 100vh;
+  z-index: 2;
 }
 
 .image-modal .background {
+  position: absolute;
   background-color: #000;
-  opacity: 0.9;
+  opacity: 0.95;
   width: 100%;
   height: 100%;
+  top: 0;
 }
 
-.image-modal img {
+.image-modal .image-container {
+  position: relative;
+  width: 100%;
+  height: 90%;
+}
+
+.image-modal .image-container img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -23,11 +31,38 @@
   max-height: 90%;
 }
 
-.image-modal .close-button {
-  position: absolute;
-  top: 0;
+.image-modal .detail-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  height: 10%;
+  min-height: 50px;
+}
+
+.image-modal .detail-row .detail {
+  color: #FFF;
+  z-index: 1;
+}
+
+@media (min-width: 800px) {
+  .image-modal .detail-row .detail {
+    margin-left: 5%;
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 799px) {
+  .image-modal .detail-row .detail {
+    margin-left: 5%;
+    font-size: 2rem;
+  }
+}
+
+.image-modal .detail-row .close-button {
   cursor: pointer;
   color: #FFF;
-  padding: 15px;
-  left: 100%;
+  margin-right: 15px;
+  z-index: 2;
 }
